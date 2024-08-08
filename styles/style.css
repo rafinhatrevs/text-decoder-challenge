@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --cor-texto-primario: #0A3871;
+    --cor-texto-secundario: #343A40;
+    --cor-texto-terciario: #495057;
+
+    --cor-fundo-principal: #F3F5FC;
+    --cor-fundo-bloco: white;
+
+    --cor-botao-escuro: #0A3871;
+
+    --cor-texto-botao-escuro: white;
+    --cor-texto-botao-claro: #0A3871;
+
+    --cor-borda-botao: #0A3871;
+
+    --fonte-primaria: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cor-fundo-principal);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabecalho {
+    height: 944px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 80px;
+}
+
+.principal {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    align-items: center;
+}
+
+.principal__entrada {
+    margin-top: 128px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: var(--cor-texto-primario);
+    font-family: var(--fonte-primaria);
+}
+
+.principal__entrada__titulo {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.principal__entrada__caixatexto {
+    background-color: transparent;
+    border: none;
+    resize: none;
+    outline: none;
+    height: 635px;
+    width: 680px;
+    color: var(--cor-texto-primario);
+    font-family: var(--fonte-primaria);
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.principal__entrada__alerta {
+    display: flex;
+    gap: 8px;
+    color: var(--cor-texto-terciario);
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+.principal__entrada__btn {
+    width: 680px;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: center;
+}
+
+.entrada__btn__criptografar,
+.entrada__btn__descriptografar {
+    width: 328px;
+    border-radius: 24px;
+    padding: 24px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.entrada__btn__criptografar {
+    background-color: var(--cor-botao-escuro);
+    color: var(--cor-texto-botao-escuro);
+}
+
+.entrada__btn__descriptografar {
+    background-color: transparent;
+    border: 1px solid var(--cor-borda-botao);
+    color: var(--cor-texto-botao-claro);
+}
+
+.principal__saida {
+    background-color: var(--cor-fundo-bloco);
+    height: 944px;
+    width: 400px;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    align-items: center;
+    font-family: var(--fonte-primaria);
+}
+
+.principal__saida__img {
+    padding: 243px 32px 0px 32px;
+}
+
+.principal__saida__texto {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    padding: 0px 32px 243px 32px;
+    text-align: center;
+}
+
+.principal__saida__texto__titulo {
+    color: var(--cor-texto-secundario);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.principal__saida__texto__mensagem {
+    color: var(--cor-texto-terciario);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.principal__saida__resultado {
+    height: 781px;
+    width: 336px;
+    padding: 32px;
+    color: var(--cor-texto-terciario);
+    font-family: var(--fonte-primaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: left;
+    overflow: auto;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.principal__saida__btn {
+    padding: 0px 32px 24px 32px;
+}
+
+.saida__btn__copiar {
+    background-color: transparent;
+    width: 336px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    border: 1px solid var(--cor-borda-botao);
+    padding: 24px;
+    color: var(--cor-texto-botao-claro);
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    cursor: pointer;
+}

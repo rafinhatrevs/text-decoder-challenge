@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador de Texto</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <img src="./assets/alura.png" alt="Logo da Alura.">
+    </header>
+
+    <main class="principal">
+        <section class="principal__entrada">
+            <h1 class="principal__entrada__titulo" id="entradaTitulo">Digite seu texto</h1>
+
+            <textarea class="principal__entrada__caixatexto"></textarea>
+
+            <p class="principal__entrada__alerta">
+                <img src="./assets/alerta.png" alt="Símbolo de alerta.">
+                Apenas letras minúsculas e sem acento.
+            </p>
+
+            <div class="principal__entrada__btn">
+                <button onclick="criptografar()" class="entrada__btn__criptografar">Criptografar</button>
+                <button onclick="descriptografar()" class="entrada__btn__descriptografar">Descriptografar</button>
+            </div>
+        </section>
+
+        <section class="principal__saida">
+            <div class="principal__saida__img" id="saidaImagem">
+                <img src="./assets/animacao.png" alt="Personagem com uma lupa.">
+            </div>
+
+            <div class="principal__saida__texto" id="saidaTexto">
+                <h2 class="principal__saida__texto__titulo"><strong>Nenhuma mensagem encontrada</strong></h2>
+                <p class="principal__saida__texto__mensagem">Digite um texto que você deseja<br>criptografar ou
+                    descriptografar.
+                </p>
+            </div>
+
+            <div class="principal__saida__resultado" id="saidaResultado"></div>
+
+            <div class="principal__saida__btn">
+                <button onclick="copiar()" class="saida__btn__copiar" id="saidaBotao">Copiar</button>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <script src="./script.js" defer></script>
+</body>
+
+</html>
