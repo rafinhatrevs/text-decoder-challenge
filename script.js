@@ -35,7 +35,7 @@ const criptografar = () => {
     saidaTexto.style.display = 'none';
     saidaResultado.textContent = textoCriptografado.join('');
     saidaBotao.style.display = 'flex';
-}
+};
 
 const descriptografar = () => {
     const texto = document.querySelector('.principal__entrada__caixatexto').value;
@@ -58,11 +58,11 @@ const descriptografar = () => {
     saidaTexto.style.display = 'none';
     saidaResultado.textContent = textoDescriptografado;
     saidaBotao.style.display = 'flex';
-}
+};
 
 const copiar = () => {
     const texto = document.querySelector('.principal__saida__resultado').textContent;
     navigator.clipboard.writeText(texto).then(() => {
         alert('Texto copiado!');
     });
-}
+};
