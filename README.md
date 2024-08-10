@@ -24,29 +24,33 @@ Projeto desenvolvido para o desafio do programa ONE.
 
 ###  💻 Estrutura do Projeto
 
-- **index.html:** 
-- **script.js:** 
+- **index.html:** Arquivo que contém a estrutura html da página Decodificador de Texto.
+- **script.js:** Arquivo que contém as funções responsáveis pela lógica de Criptografar, Descriptografar e Copiar texto.
   
 #### styles/:
-- **style.css:** 
+- **style.css:** Arquivo que contém a folha de estilo da página Decodificador de Texto.
   
 #### assets/:
+  Pasta que contém todas as imagens utilizadas na página.
 
 <img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="1000">
 
 ### ⚙️ Funcionalidades
 
-- **Criptografar:**
-- **Descriptografar:**
-- **Copiar:** 
+- **Criptografar:**  
+  Função para realizar a criptografia de um texto digitado pelo usuário.
+- **Descriptografar:**  
+  Função para realizar a descriptografia de um texto digitado pelo usuário.
+- **Copiar:**
+  Função para copiar o texto criptografado ou descriptografado pelo usuário.
   
 <img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="1000">
 
 ### 🛠 Tecnologias Utilizadas
 
-- **HTML:**
-- **CSS:**
-- **JavaScript:**
+- **HTML:** Linguagem de marcação utilizada na construção de páginas na web.
+- **CSS:** Mecanismo para adicionar estilos a uma página web.
+- **JavaScript:** Linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma.
 
 <img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="1000">
 
