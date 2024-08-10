@@ -41,7 +41,7 @@ Projeto desenvolvido para o desafio do programa ONE.
   Função para realizar a criptografia de um texto digitado pelo usuário.
 - **Descriptografar:**  
   Função para realizar a descriptografia de um texto digitado pelo usuário.
-- **Copiar:**
+- **Copiar:**  
   Função para copiar o texto criptografado ou descriptografado pelo usuário.
   
 <img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="1000">
