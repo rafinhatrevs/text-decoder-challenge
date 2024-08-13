@@ -24,9 +24,9 @@
 }
 
 body {
+    background-color: var(--cor-fundo-principal);
     min-height: 100vh;
     padding: 16px;
-    background-color: var(--cor-fundo-principal);
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -35,11 +35,11 @@ body {
 
 .cabecalho {
     height: 944px;
+    padding-right: 80px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
-    padding-right: 80px;
+    align-items: center; 
 }
 
 .principal {
@@ -135,11 +135,11 @@ body {
 }
 
 .principal__saida__texto {
+    padding: 0px 32px 243px 32px;
     display: flex;
     flex-direction: column;
     gap: 16px;
     align-items: center;
-    padding: 0px 32px 243px 32px;
     text-align: center;
 }
 
@@ -176,12 +176,12 @@ body {
 .saida__btn__copiar {
     background-color: transparent;
     width: 336px;
-    display: none;
-    justify-content: center;
-    align-items: center;
     border-radius: 24px;
     border: 1px solid var(--cor-borda-botao);
     padding: 24px;
+    display: none;
+    justify-content: center;
+    align-items: center;
     color: var(--cor-texto-botao-claro);
     text-align: center;
     font-size: 1rem;
