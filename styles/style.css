@@ -24,9 +24,9 @@
 }
 
 body {
-    min-height: 100vh;
-    padding: 16px;
     background-color: var(--cor-fundo-principal);
+    min-height: 100vh;
+    padding: auto;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -34,12 +34,12 @@ body {
 }
 
 .cabecalho {
-    height: 944px;
+    margin-bottom: auto;
+    padding-right: 80px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-right: 80px;
 }
 
 .principal {
@@ -96,8 +96,8 @@ body {
 .entrada__btn__criptografar,
 .entrada__btn__descriptografar {
     width: 328px;
-    border-radius: 24px;
     padding: 24px;
+    border-radius: 24px;
     text-align: center;
     font-size: 1rem;
     font-weight: 400;
@@ -135,11 +135,11 @@ body {
 }
 
 .principal__saida__texto {
+    padding: 0px 32px 243px 32px;
     display: flex;
     flex-direction: column;
     gap: 16px;
     align-items: center;
-    padding: 0px 32px 243px 32px;
     text-align: center;
 }
 
@@ -176,16 +176,112 @@ body {
 .saida__btn__copiar {
     background-color: transparent;
     width: 336px;
+    padding: 24px;
+    border-radius: 24px;
+    border: 1px solid var(--cor-borda-botao);
     display: none;
     justify-content: center;
     align-items: center;
-    border-radius: 24px;
-    border: 1px solid var(--cor-borda-botao);
-    padding: 24px;
     color: var(--cor-texto-botao-claro);
     text-align: center;
     font-size: 1rem;
     font-weight: 400;
     text-decoration: none;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .cabecalho {
+        padding-right: 0;
+    }
+
+    .principal {
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .principal__saida {
+        position: relative;
+        height: auto;
+        width: 680px;
+        max-width: none;
+    }
+
+    .principal__saida__img {
+        display: none;
+    }
+
+    .principal__saida__texto {
+        padding: 32px;
+    }
+
+    .principal__saida__resultado {
+        height: auto;
+        width: 624px;
+    }
+
+    .principal__saida__btn {
+        padding: 32px;
+    }
+
+    .saida__btn__copiar {
+        width: 624px;
+    }
+}
+
+@media (max-width: 375px) {
+    .cabecalho {
+        padding-right: 0;
+    }
+
+    .principal {
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .principal__entrada__caixatexto {
+        width: 343px;
+    }
+
+
+    .principal__entrada__btn {
+        width: 343px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .entrada__btn__criptografar,
+    .entrada__btn__descriptografar {
+        width: 343px;
+    }
+
+    .principal__saida {
+        position: relative;
+        height: auto;
+        width: 343px;
+        max-width: none;
+    }
+
+    .principal__saida__img {
+        display: none;
+    }
+
+    .principal__saida__texto {
+        padding: 32px;
+    }
+
+    .principal__saida__resultado {
+        height: auto;
+        width: 279px;
+    }
+
+    .principal__saida__btn {
+        padding: 32px;
+    }
+
+    .saida__btn__copiar {
+        width: 279px;
+    }
 }
