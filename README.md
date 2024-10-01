@@ -4,7 +4,7 @@ Praticando Lógica de Programação: Challenge Decodificador de texto
 <p align="center">
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/rafinhatrevs/text-decoder-challenge">
   
-  <a href="https://github.com/rafinhatrevs/text-decoder-challenge/commits/master/">
+  <a href="https://github.com/rafinhatrevs/text-decoder-challenge/commits/main/">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/rafinhatrevs/text-decoder-challenge">
   </a>
   
