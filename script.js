@@ -1,5 +1,5 @@
 const criptografar = () => {
-    const texto = document.querySelector('.principal__entrada__caixatexto').value;
+    const texto = document.querySelector('.principal__input__caixatexto').value;
     const arrayLetras = texto.split('');
     const textoCriptografado = [];
 
@@ -24,21 +24,22 @@ const criptografar = () => {
         }
     }
 
-    const entradaTitulo = document.getElementById('entradaTitulo');
-    const saidaImagem = document.getElementById('saidaImagem');
-    const saidaTexto = document.getElementById('saidaTexto');
-    const saidaResultado = document.getElementById('saidaResultado');
-    const saidaBotao = document.getElementById('saidaBotao');
+    const inputTitulo = document.getElementById('inputTitulo');
+    const outputImagem = document.getElementById('outputImagem');
+    const outputTexto = document.getElementById('outputTexto');
+    const outputResultado = document.getElementById('outputResultado');
+    const outputBotao = document.getElementById('botaoCopiar');
 
-    entradaTitulo.style.visibility = 'hidden';
-    saidaImagem.style.display = 'none';
-    saidaTexto.style.display = 'none';
-    saidaResultado.textContent = textoCriptografado.join('');
-    saidaBotao.style.display = 'flex';
+    inputTitulo.style.visibility = 'hidden';
+    outputImagem.style.display = 'none';
+    outputTexto.style.display = 'none';
+    outputResultado.style.display = 'block';
+    outputResultado.textContent = textoCriptografado.join('');
+    outputBotao.style.display = 'flex';
 };
 
 const descriptografar = () => {
-    const texto = document.querySelector('.principal__entrada__caixatexto').value;
+    const texto = document.querySelector('.principal__input__caixatexto').value;
     let textoDescriptografado = texto;
 
     textoDescriptografado = textoDescriptografado.replace(/enter/g, 'e');
@@ -47,21 +48,22 @@ const descriptografar = () => {
     textoDescriptografado = textoDescriptografado.replace(/ober/g, 'o');
     textoDescriptografado = textoDescriptografado.replace(/ufat/g, 'u');
 
-    const entradaTitulo = document.getElementById('entradaTitulo');
-    const saidaImagem = document.getElementById('saidaImagem');
-    const saidaTexto = document.getElementById('saidaTexto');
-    const saidaResultado = document.getElementById('saidaResultado');
-    const saidaBotao = document.getElementById('saidaBotao');
+    const inputTitulo = document.getElementById('inputTitulo');
+    const outputImagem = document.getElementById('outputImagem');
+    const outputTexto = document.getElementById('outputTexto');
+    const outputResultado = document.getElementById('outputResultado');
+    const outputBotao = document.getElementById('botaoCopiar');
 
-    entradaTitulo.style.visibility = 'hidden';
-    saidaImagem.style.display = 'none';
-    saidaTexto.style.display = 'none';
-    saidaResultado.textContent = textoDescriptografado;
-    saidaBotao.style.display = 'flex';
+    inputTitulo.style.visibility = 'hidden';
+    outputImagem.style.display = 'none';
+    outputTexto.style.display = 'none';
+    outputResultado.style.display = 'block';
+    outputResultado.textContent = textoDescriptografado;
+    outputBotao.style.display = 'flex';
 };
 
 const copiar = () => {
-    const texto = document.querySelector('.principal__saida__resultado').textContent;
+    const texto = document.querySelector('.principal__output__resultado').textContent;
     navigator.clipboard.writeText(texto).then(() => {
         alert('Texto copiado!');
     });

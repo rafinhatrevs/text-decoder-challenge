@@ -21,55 +21,60 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: var(--cor-fundo-principal);
     min-height: 100vh;
-    padding: auto;
-    box-sizing: border-box;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .cabecalho {
-    margin-bottom: 904px;
-    padding-right: 80px;
+    height: 100vh;
+    margin: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
 
+.cabecalho__img {
+    height: auto;
+    margin-top: 0;
+}
+
 .principal {
     display: flex;
     justify-content: space-between;
-    gap: 80px;
     align-items: center;
+    gap: 40px;
 }
 
-.principal__entrada {
-    margin-top: 128px;
-    margin-bottom: 32px;
+.principal__input {
+    height: auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 16px;
     color: var(--cor-texto-primario);
     font-family: var(--fonte-primaria);
 }
 
-.principal__entrada__titulo {
+.principal__input__titulo {
+    position: relative;
+    top: 80px;
     font-size: 2rem;
     font-weight: 400;
 }
 
-.principal__entrada__caixatexto {
+.principal__input__caixatexto {
     background-color: transparent;
     border: none;
     resize: none;
     outline: none;
-    height: 635px;
+    height: 600px;
     width: 680px;
     color: var(--cor-texto-primario);
     font-family: var(--fonte-primaria);
@@ -77,7 +82,7 @@ body {
     font-weight: 400;
 }
 
-.principal__entrada__alerta {
+.principal__input__alerta {
     display: flex;
     gap: 8px;
     color: var(--cor-texto-terciario);
@@ -85,16 +90,16 @@ body {
     font-weight: 400;
 }
 
-.principal__entrada__btn {
+.principal__input__btn {
     width: 680px;
     display: flex;
     justify-content: space-between;
-    gap: 24px;
     align-items: center;
+    gap: 24px;
 }
 
-.entrada__btn__criptografar,
-.entrada__btn__descriptografar {
+.btn__criptografar,
+.btn__descriptografar {
     width: 328px;
     padding: 24px;
     border-radius: 24px;
@@ -105,59 +110,56 @@ body {
     cursor: pointer;
 }
 
-.entrada__btn__criptografar {
+.btn__criptografar {
     background-color: var(--cor-botao-escuro);
     color: var(--cor-texto-botao-escuro);
 }
 
-.entrada__btn__descriptografar {
+.btn__descriptografar {
     background-color: transparent;
     border: 1px solid var(--cor-borda-botao);
     color: var(--cor-texto-botao-claro);
 }
 
-.principal__saida {
+.principal__output {
     background-color: var(--cor-fundo-bloco);
-    height: 944px;
-    width: 100%;
-    max-width: 400px;
+    height: 100vh;
+    width: 400px;
+    margin: 20px;
+    padding: 32px;
     border-radius: 32px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 32px;
     align-items: center;
+    gap: 32px;
     font-family: var(--fonte-primaria);
 }
 
-.principal__saida__img {
-    padding: 243px 32px 0px 32px;
-}
-
-.principal__saida__texto {
-    padding: 0px 32px 243px 32px;
+.principal__output__texto {
     display: flex;
     flex-direction: column;
-    gap: 16px;
     align-items: center;
+    gap: 16px;
     text-align: center;
 }
 
-.principal__saida__texto__titulo {
+.texto__titulo {
     color: var(--cor-texto-secundario);
     font-size: 1.5rem;
     font-weight: 700;
 }
 
-.principal__saida__texto__mensagem {
+.texto__mensagem {
     color: var(--cor-texto-terciario);
     font-size: 1rem;
     font-weight: 400;
 }
 
-.principal__saida__resultado {
-    height: 781px;
-    width: 336px;
+.principal__output__resultado {
+    display: none;
+    height: 100vh;
+    width: 400px;
     padding: 32px;
     color: var(--cor-texto-terciario);
     font-family: var(--fonte-primaria);
@@ -169,13 +171,9 @@ body {
     white-space: pre-wrap;
 }
 
-.principal__saida__btn {
-    padding: 0px 32px 24px 32px;
-}
-
-.saida__btn__copiar {
+.btn__copiar {
     background-color: transparent;
-    width: 336px;
+    width: 350px;
     padding: 24px;
     border-radius: 24px;
     border: 1px solid var(--cor-borda-botao);
@@ -191,97 +189,74 @@ body {
 }
 
 @media (max-width: 768px) {
-    .cabecalho {
-        padding-right: 0;
-    }
-
     .principal {
         flex-direction: column;
         justify-content: center;
         gap: 40px;
     }
 
-    .principal__saida {
+    .principal__output {
         position: relative;
         height: auto;
         width: 680px;
-        max-width: none;
+        gap: 0;
     }
 
-    .principal__saida__img {
+    .principal__output__img {
         display: none;
     }
 
-    .principal__saida__texto {
-        padding: 32px;
-    }
-
-    .principal__saida__resultado {
+    .principal__output__resultado {
         height: auto;
-        width: 624px;
+        width: 640px;
     }
 
-    .principal__saida__btn {
-        padding: 32px;
-    }
-
-    .saida__btn__copiar {
-        width: 624px;
+    .btn__copiar {
+        display: none;
+        width: 640px;
     }
 }
 
 @media (max-width: 375px) {
-    .cabecalho {
-        padding-right: 0;
-    }
-
     .principal {
         flex-direction: column;
         justify-content: center;
         gap: 40px;
     }
 
-    .principal__entrada__caixatexto {
-        width: 343px;
+    .principal__input__caixatexto {
+        width: 340px;
     }
 
-
-    .principal__entrada__btn {
-        width: 343px;
+    .principal__input__btn {
+        width: 340px;
         flex-direction: column;
         justify-content: center;
     }
 
-    .entrada__btn__criptografar,
-    .entrada__btn__descriptografar {
-        width: 343px;
+    .btn__criptografar,
+    .btn__descriptografar {
+        width: 340px;
     }
 
-    .principal__saida {
+    .principal__output {
         position: relative;
         height: auto;
-        width: 343px;
-        max-width: none;
+        width: 340px;
+        gap: 0;
     }
 
-    .principal__saida__img {
+    .principal__output__img {
         display: none;
     }
 
-    .principal__saida__texto {
-        padding: 32px;
-    }
-
-    .principal__saida__resultado {
+    .principal__output__resultado {
         height: auto;
-        width: 279px;
+        width: 300px;
     }
 
-    .principal__saida__btn {
-        padding: 32px;
-    }
-
-    .saida__btn__copiar {
-        width: 279px;
+    .btn__copiar {
+        display: none;
+        width: 300px;
     }
 }
